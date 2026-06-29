@@ -327,4 +327,4 @@ print(type(variable_name))
 
 ---
 
-> 📖 Next Topic: Comparison Operators
+> 📖 Next Topic: python Strings
