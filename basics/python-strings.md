@@ -266,6 +266,45 @@ Python, Java, C++
 
 ---
 
+# 🔀 Slice
+
+## Slice Strings With Brackets [m,n,step]
+
+```python
+name = "Alireza Fahimi"
+printe(name[0])
+```
+
+Output
+
+```python
+'A'
+```
+
+name = "Alireza Fahimi"
+```python
+print(name[1:5])
+```
+
+Output
+
+```python
+'lirez'
+```
+
+name = "Alireza Fahimi"
+```python
+printe(name[-1])
+```
+
+Output
+
+```python
+'i'
+```
+
+---
+
 # 🔀 String Concatenation
 
 ## Method 1: +
