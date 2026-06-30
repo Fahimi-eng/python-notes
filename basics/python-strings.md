@@ -478,4 +478,7 @@ print(f"Welcome, {name}!")
 ## ⭐ Difficulty
 
 🟢 Beginner
+---
+
+> 📖 Next Topic: Lists
 
