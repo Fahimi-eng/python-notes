@@ -479,6 +479,3 @@ print(f"Welcome, {name}!")
 
 🟢 Beginner
 
----
-
-> 📖 Next Topic: Comparison Operators
