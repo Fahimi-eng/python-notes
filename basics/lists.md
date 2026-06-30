@@ -444,6 +444,3 @@ Result
 
 🟢 Beginner
 
----
-
-> 📖 Next Topic: Tuples
