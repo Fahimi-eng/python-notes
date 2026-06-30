@@ -443,4 +443,7 @@ Result
 ## ⭐ Difficulty
 
 🟢 Beginner
+---
+
+> 📖 Next Topic: Dictionaries
 
