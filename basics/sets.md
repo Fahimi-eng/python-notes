@@ -468,3 +468,6 @@ items = set()
 
 🟢 Beginner
 
+---
+
+> 📖 Next Topic: Booleans
