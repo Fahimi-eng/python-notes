@@ -1,0 +1,442 @@
+# 📝 Booleans in Python
+
+> A Boolean is a data type that represents one of two possible values: `True` or `False`.
+
+---
+
+# 📚 What is a Boolean?
+
+A **Boolean** is one of Python's built-in data types.
+
+It is used to represent logical values.
+
+A Boolean can have only one of these values:
+
+* `True`
+* `False`
+
+Example:
+
+```python
+is_logged_in = True
+
+is_admin = False
+```
+
+Booleans are mainly used for:
+
+* Making decisions
+* Comparing values
+* Controlling program flow
+* Loop conditions
+
+---
+
+# 📌 Creating Boolean Variables
+
+```python
+is_student = True
+
+is_married = False
+```
+
+Check the data type.
+
+```python
+print(type(is_student))
+```
+
+Output
+
+```text
+<class 'bool'>
+```
+
+---
+
+# 🔍 Boolean Values from Comparisons
+
+Comparison operators always return a Boolean value.
+
+```python
+print(10 > 5)
+```
+
+Output
+
+```text
+True
+```
+
+Example
+
+```python
+print(5 == 5)
+
+print(5 != 10)
+
+print(20 < 10)
+```
+
+Output
+
+```text
+True
+True
+False
+```
+
+---
+
+# ⚖ Comparison Operators
+
+| Operator | Meaning               | Example  |
+| -------- | --------------------- | -------- |
+| `==`     | Equal to              | `5 == 5` |
+| `!=`     | Not equal             | `5 != 3` |
+| `>`      | Greater than          | `8 > 5`  |
+| `<`      | Less than             | `3 < 8`  |
+| `>=`     | Greater than or equal | `5 >= 5` |
+| `<=`     | Less than or equal    | `4 <= 6` |
+
+All of these return either `True` or `False`.
+
+---
+
+# 🔗 Boolean Operators
+
+## and
+
+Returns `True` only if **both** conditions are true.
+
+```python
+age = 25
+
+print(age > 18 and age < 30)
+```
+
+Output
+
+```text
+True
+```
+
+---
+
+## or
+
+Returns `True` if **at least one** condition is true.
+
+```python
+print(age < 18 or age < 30)
+```
+
+Output
+
+```text
+True
+```
+
+---
+
+## not
+
+Reverses the Boolean value.
+
+```python
+is_logged_in = True
+
+print(not is_logged_in)
+```
+
+Output
+
+```text
+False
+```
+
+---
+
+# 💡 Truthy and Falsy Values
+
+In Python, not only `True` and `False` can be used in conditions.
+
+Some values are considered **Falsy**.
+
+## Falsy Values
+
+```python
+False
+None
+0
+0.0
+''
+[]
+()
+{}
+set()
+```
+
+Everything else is generally considered **Truthy**.
+
+Example
+
+```python
+if "":
+    print("Hello")
+else:
+    print("Empty")
+```
+
+Output
+
+```text
+Empty
+```
+
+---
+
+# 🎯 Boolean Conversion
+
+Use `bool()` to convert values.
+
+```python
+print(bool(1))
+```
+
+Output
+
+```text
+True
+```
+
+---
+
+```python
+print(bool(0))
+```
+
+Output
+
+```text
+False
+```
+
+---
+
+Examples
+
+```python
+bool("Python")
+```
+
+Output
+
+```text
+True
+```
+
+---
+
+```python
+bool("")
+```
+
+Output
+
+```text
+False
+```
+
+---
+
+```python
+bool([])
+```
+
+Output
+
+```text
+False
+```
+
+---
+
+```python
+bool([1])
+```
+
+Output
+
+```text
+True
+```
+
+---
+
+# 🔄 Using Booleans in Conditions
+
+```python
+age = 20
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Child")
+```
+
+---
+
+Using Boolean variables
+
+```python
+is_logged_in = True
+
+if is_logged_in:
+    print("Welcome!")
+```
+
+---
+
+# ⚠ Common Mistakes
+
+Comparing a Boolean with `True` unnecessarily.
+
+Instead of
+
+```python
+if is_logged_in == True:
+    print("Welcome")
+```
+
+Write
+
+```python
+if is_logged_in:
+    print("Welcome")
+```
+
+---
+
+Instead of
+
+```python
+if is_logged_in == False:
+    print("Please log in")
+```
+
+Write
+
+```python
+if not is_logged_in:
+    print("Please log in")
+```
+
+---
+
+# ✅ Best Practices
+
+✔ Use meaningful Boolean variable names.
+
+Good examples:
+
+```python
+is_admin
+
+has_permission
+
+can_edit
+
+is_valid
+```
+
+Avoid names like:
+
+```python
+flag
+
+value
+
+x
+```
+
+---
+
+✔ Use direct Boolean expressions.
+
+✔ Use `not` instead of comparing with `False`.
+
+✔ Choose descriptive names that clearly express a condition.
+
+---
+
+# 🧪 Practice
+
+Create the following variables:
+
+```python
+age = 22
+
+is_student = True
+
+has_license = False
+```
+
+Then:
+
+* Check whether the age is greater than 18.
+* Check whether the user is both a student and over 18.
+* Print the opposite of `has_license`.
+* Convert an empty string to a Boolean.
+* Convert a non-empty list to a Boolean.
+
+---
+
+# 📚 Boolean Functions and Operators
+
+| Function / Operator | Description                |
+| ------------------- | -------------------------- |
+| `bool()`            | Convert a value to Boolean |
+| `==`                | Equal                      |
+| `!=`                | Not Equal                  |
+| `>`                 | Greater Than               |
+| `<`                 | Less Than                  |
+| `>=`                | Greater Than or Equal      |
+| `<=`                | Less Than or Equal         |
+| `and`               | Logical AND                |
+| `or`                | Logical OR                 |
+| `not`               | Logical NOT                |
+
+---
+
+# 📝 Summary
+
+* A Boolean has only two values: `True` and `False`.
+* Comparison operators always return Boolean values.
+* Logical operators (`and`, `or`, `not`) combine or modify Boolean expressions.
+* Python uses the concepts of **Truthy** and **Falsy** values in conditions.
+* Use meaningful Boolean variable names.
+* Prefer direct Boolean expressions instead of comparing with `True` or `False`.
+
+---
+
+## 🔗 References
+
+* Python Official Documentation
+* PEP 8 Style Guide
+
+---
+
+## 📅 Last Updated
+
+2026-07-02
+
+---
+
+## ⭐ Difficulty
+
+🟢 Beginner
+
+---
+
+> 📖 Next Topic: Conditional Statements (`if`, `elif`, `else`)
