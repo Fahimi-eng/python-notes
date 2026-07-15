@@ -1,0 +1,82 @@
+# شرح مسئله:
+# یک باغ‌وحش قصد دارد یک سیستم مدیریت حیوانات ایجاد کند. شما باید با استفاده از برنامه‌نویسی شی‌گرا (OOP) در پایتون، این سیستم را طراحی کنید.
+
+ 
+# ۱. مقدمه بر شی‌گرایی (OOP Introduction)
+# وظیفه شما:
+# یک کلاس به نام Animal تعریف کنید که ویژگی‌های زیر را داشته باشد:
+
+# name (نام حیوان)
+# species (گونه حیوان)
+# age (سن حیوان)
+# sound (صدای حیوان)
+# سپس یک نمونه از این کلاس برای یک "شیر" ایجاد کرده و مشخصات آن را چاپ کنید.
+
+ 
+# ۲. ویژگی‌ها و کلاس‌ها (Attributes and Class Keyword)
+# وظیفه شما:
+# متد make_sound() را به کلاس Animal اضافه کنید که صدای حیوان را چاپ کند.
+
+ 
+# ۳. ویژگی‌های کلاس و متدها (Class Object Attributes and Methods)
+# وظیفه شما:
+# یک ویژگی کلاس (zoo_name) اضافه کنید که نام باغ‌وحش را مشخص کند. همچنین، یک متد info() تعریف کنید که مشخصات حیوان را چاپ کند.
+
+ 
+# ۴. ارث‌بری و چندریختی (Inheritance and Polymorphism)
+# وظیفه شما:
+# یک کلاس جدید به نام Bird از Animal بسازید که یک ویژگی جدید wing_span (اندازه بال) داشته باشد.
+# همچنین متد make_sound() را بازنویسی کنید تا صدای پرندگان متفاوت باشد.
+
+ 
+# ۵. متدهای جادویی (Magic/Dunder Methods)
+# وظیفه شما:
+# متد __str__ را در کلاس Animal پیاده‌سازی کنید تا وقتی شیء را چاپ می‌کنید، مشخصات حیوان نمایش داده شود.
+
+
+# ---------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------
+class Animal():
+    def __init__(self, name, species, age, sound,zoo_name) -> None:
+        self.name = name
+        self.species = species
+        self.age = age
+        self.sound = sound
+        self.zoo_name = zoo_name
+
+
+    def __str__(self):
+        return (f"The Animal Name is {self.name} & Its Species is {self.species} & Its Age is {self.age} & Its Sound is {self.sound} & It is in {self.zoo_name}")
+
+    def make_sound(self):
+        print(self.sound  + "!!!")
+    
+    def info(self):
+        print (f"The Animal Name is {self.name} & Its Species is {self.species} & Its Age is {self.age} & Its Sound is {self.sound} & It is in {self.zoo_name}")
+    
+
+dog = Animal('puppy',  'dogs', 7, 'hop hop', 'Central Zoo')
+dog.make_sound()
+dog.info()
+str(dog)
+
+
+class Bird(Animal):
+    def __init__(self, name, species, age, sound, zoo_name, wing_span) -> None:
+        self.wing_span = wing_span
+        super().__init__(name, species, age, sound, zoo_name)
+    
+    def make_sound(self):
+        return super().make_sound()
+    
+    def info(self):
+        print (f"The Bird  Name is {self.name} & Its Species is {self.species} & Its Age is {self.age} & Its Sound is {self.sound} with {self.wing_span} wing span & It is in {self.zoo_name}")
+    
+
+
+chicken = Bird('chicken', 'birds', 2, 'god god', 'Farm', 30)
+chicken.info()
+    
+    
+
+
